@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const URI = process.env.MONGODB_URI
   ? process.env.MONGODB_URI
-  : "mongodb://localhost:27017/transporte_publico_ensenada";
+  : "mongodb+srv://yanitza:yanitza@cluster0.ddsljbh.mongodb.net/transporte_publico_ensenada";
 
 console.log(URI);
 mongoose.connect(URI, (err, db) => {

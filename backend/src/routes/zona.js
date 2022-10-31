@@ -5,9 +5,9 @@ const mongoose = require("mongoose");
 const eschema = mongoose.Schema;
 
 const eschemaZona = new eschema({
+  idzona: String,
   nombrezona: String,
   cpostal: String, 
-  idzona: String,
 });
 
 const ModelZona = mongoose.model("zona", eschemaZona);
@@ -17,9 +17,9 @@ module.exports = router;
 // INSERTAR ZONA
 router.post("/agregarZona", (req, res) => {
   const nuevoZona = new ModelZona({
+    idzona: req.body.idzona,
     nombrezona: req.body.nombrezona,
     cpostal: req.body.cpostal,
-    idzona: req.body.idzona,
   });
   nuevaZona.save((err) => {
     if (!err) {
@@ -54,6 +54,6 @@ router.post("/obtenerZona", (req, res) => {
 router.post("/deleteZona", (req, res) => {
   ModelZona.findOneAndDelete({ idzona: req.body.idzona }).then((ZONA, err) => {
     if (err) res.json(err);
-    else res.json("Zona " + ZONA + " Eliminada");
+    else res.json("Zona " + idzona + " Eliminada");
   });
 });

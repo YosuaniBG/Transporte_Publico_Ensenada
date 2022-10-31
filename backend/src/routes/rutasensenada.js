@@ -19,7 +19,7 @@ const ModelRutas = mongoose.model("rutasensenada", eschemaRutas);
 
 module.exports = router;
 
-// INSERTAR USUARIO
+// INSERTAR Ruta
 router.post("/agregarRuta", (req, res) => {
   const nuevaRuta = new ModelRutas({
     origen: req.body.origen,

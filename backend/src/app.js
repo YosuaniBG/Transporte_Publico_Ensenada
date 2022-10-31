@@ -16,6 +16,7 @@ app.use(express.json());
 // importacion de routes y modelos
 const rutaZona=require('./routes/zona')
 const rutaRuta=require('./routes/rutasensenada')
+const rutaTramo=require('./routes/tramos')
 
 // importar body-parser para convertir la peticion en JSON
 const bodyParser= require('body-parser')
