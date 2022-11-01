@@ -27,4 +27,7 @@ app.use(bodyParser.urlencoded({extended:'true'}))
 app.use('/api/zona',rutaZona)
 app.use('/api/rutasensenada',rutaRuta)
 
+//conexion API de Geolocalizacion
+
+
 module.exports = app;
